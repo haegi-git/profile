@@ -3,11 +3,3 @@ body, html {
     padding: 0;
     overflow: hidden;
   }
-  .section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    color: white;
-  }
-  
