@@ -7,6 +7,7 @@ import TopNav from "./Components/TopNav.jsx";
 import SkillInfo from "./Components/SkillInfo.jsx";
 import { ThemeProvider } from "styled-components";
 import theme from "./Theme.js";
+import Portfolio from "./Components/Portfolio.jsx";
 
 const App = () => {
     useEffect(() => {
@@ -34,7 +35,7 @@ const App = () => {
                     <SkillInfo/>
                 </div>
                 <div className="section" style={{ background: theme.colors.background, height: "100vh" }}>
-                    <h1>Section 3</h1>
+                    <Portfolio/>
                 </div>
             </div>
         </ThemeProvider>

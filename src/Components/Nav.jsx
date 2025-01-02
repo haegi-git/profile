@@ -40,13 +40,13 @@ function NavMenu() {
         <Menu>
             <ul>
                 <li>
-                    <a href="#section1">Section 1</a>
+                    <a href="#section1">인사말</a>
                 </li>
                 <li>
-                    <a href="#section2">Section 2</a>
+                    <a href="#section2">기술 스택</a>
                 </li>
                 <li>
-                    <a href="#section3">Section 3</a>
+                    <a href="#section3">프로젝트</a>
                 </li>
             </ul>
         </Menu>
