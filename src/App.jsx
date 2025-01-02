@@ -1,10 +1,12 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import fullpage from "fullpage.js";
 import "fullpage.js/dist/fullpage.css";
 import NavMenu from "./Components/Nav.jsx";
 import Info from "./Components/Info.jsx";
 import TopNav from "./Components/TopNav.jsx";
 import SkillInfo from "./Components/SkillInfo.jsx";
+import { ThemeProvider } from "styled-components";
+import theme from "./Theme.js";
 
 const App = () => {
     useEffect(() => {
@@ -18,24 +20,24 @@ const App = () => {
     }, []);
 
     return (
-        <>
+        <ThemeProvider theme={theme}>
             {/* 사용자 정의 메뉴 */}
             <TopNav/>
             <NavMenu/>
 
             {/* Fullpage 섹션 */}
             <div id="fullpage" style={{marginLeft: '90px'}}>
-                <div className="section" style={{ background: "#f7f9fc", height: "100vh" }}>
+                <div className="section" style={{ background: theme.colors.background, height: "100vh" }}>
                     <Info/>
                 </div>
-                <div className="section" style={{ background: "#0798ec", height: "100vh" }}>
+                <div className="section" style={{ background: theme.colors.background, height: "100vh" }}>
                     <SkillInfo/>
                 </div>
-                <div className="section" style={{ background: "#fc6c7c", height: "100vh" }}>
+                <div className="section" style={{ background: theme.colors.background, height: "100vh" }}>
                     <h1>Section 3</h1>
                 </div>
             </div>
-        </>
+        </ThemeProvider>
     );
 };
 

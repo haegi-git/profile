@@ -1,4 +1,4 @@
-import React from "react";
+
 import styled from "styled-components";
 
 const Menu = styled.nav`
@@ -8,11 +8,11 @@ const Menu = styled.nav`
     z-index: 50;
     height: 100%; /* 화면 전체 높이 */
     width: 90px; /* 고정된 너비 */
-    background-color: #f7f9fc; /* 네비게이션 배경 색상 */
+    background-color: ${(props) => props.theme.colors.background};
     display: flex;
     align-items: center;
     justify-content: center;
-    border-right: 1px solid #ccc;
+    border-right: ${(props) => props.theme.colors.border};
     ul {
         display: flex;
         flex-direction: column;
@@ -24,11 +24,11 @@ const Menu = styled.nav`
             text-align: center;
             a {
                 text-decoration: none;
-                color: #333333;
+                color: ${(props)=> props.theme.colors.textSecondary};
                 font-size: 1rem;
                 transition: color 0.3s;
                 &:hover {
-                    color: #555555;
+                    color: ${(props)=> props.theme.colors.textSecondaryHover};
                 }
             }
         }

@@ -14,7 +14,7 @@ const Container = styled.div`
             }
         }
     }
-}
+
     img {
         width: 300px; /* 이미지 너비 */
         height: 400px; /* 이미지 높이 */
@@ -28,6 +28,7 @@ const Container = styled.div`
             transform: scale(1.05); /* 호버 시 약간 확대 */
             box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); /* 호버 시 그림자 강조 */
         }
+    }
 `
 
 function SkillInfo(){
@@ -35,7 +36,7 @@ function SkillInfo(){
         <Container>
 
             <div>
-                <h3>저의 기술과 하고싶은 말</h3>
+                <h3>기술과 하고싶은 말</h3>
                 <ul>
                     <li>
                         Language
@@ -46,7 +47,16 @@ function SkillInfo(){
                     <li>
                         BackEnd
                     </li>
+                    <li>
+                        Comment
+                    </li>
                 </ul>
+                <div>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+                </div>
 
             </div>
 

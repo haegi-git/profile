@@ -4,20 +4,21 @@ import {AiFillHome} from "react-icons/ai";
 const Menu = styled.nav`
     position: fixed;
     top:0;
-    background-color: #f7f9fc; /* 네비게이션 배경 색상 */
+    background-color: ${(props) => props.theme.colors.background};
     left: 0;
     width: 100%;
     height: 90px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: ${(props) => props.theme.colors.border};
     z-index: 55;
     display: flex;
     justify-content: space-between;
+    color:${(props) => props.theme.colors.textSecondary}
 `
 
 function TopNav(){
     return(
         <Menu>
-            <AiFillHome style={{fontSize:'32px',paddingRight:'58px',borderRight:'1px solid #ccc',height: '100%'}} />
+            <AiFillHome/>
             
             <ul>
                 <li>

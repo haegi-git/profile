@@ -14,13 +14,12 @@ const fadeIn = keyframes`
 `;
 
 const Wrapper = styled.div`
-    background-color: #f9fafc; /* 밝은 배경색 */
-    height: 100vh; /* 화면 전체 높이 */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: "Arial", sans-serif;
+    color:#fff;
 `;
 
 const Header = styled.div`
@@ -31,7 +30,7 @@ const Header = styled.div`
     h1 {
         font-size: 3.5rem; /* 메인 타이틀 크기 */
         font-weight: bold;
-        color: #333333; /* 메인 글씨 색상 */
+        color: ${(props) => props.theme.colors.primary};
         margin-bottom: 15px;
         animation: ${fadeIn} 1.5s ease-in-out; /* 애니메이션 */
         animation-delay: 0.2s; /* 딜레이 추가 */
@@ -39,7 +38,7 @@ const Header = styled.div`
 
     h3 {
         font-size: 1.5rem;
-        color: #555555; /* 서브 타이틀 색상 */
+        color: ${(props) => props.theme.colors.secondary};
         line-height: 1.6;
         animation: ${fadeIn} 1.5s ease-in-out;
         animation-delay: 0.3s; /* 딜레이 추가 */
@@ -48,7 +47,7 @@ const Header = styled.div`
 
 const Description = styled.p`
     font-size: 1.2rem;
-    color: #777777;
+    color: ${(props) => props.theme.colors.textSecondary};
     max-width: 700px;
     text-align: center;
     line-height: 1.8;
@@ -64,38 +63,19 @@ const IconContainer = styled.div`
     margin-top: 30px;
     animation: ${fadeIn} 1.5s ease-in-out;
     animation-delay: 0.5s; /* 딜레이 추가 */
+    overflow: hidden; /* 스크롤 방지 */
 
     svg {
         font-size: 2.5rem;
-        color: #555555;
+        color: ${(props) => props.theme.colors.textSecondary};
         cursor: pointer;
         transition: transform 0.3s ease, color 0.3s ease;
 
         &:hover {
             transform: scale(1.2);
-            color: #333333; /* 호버 색상 */
+            color: ${(props) => props.theme.colors.textSecondaryHover};
         }
     }
-`;
-
-const SideMenu = styled.ul`
-  position: absolute;
-  left: 30px;
-  top: 50%;
-  transform: translateY(-50%);
-  list-style: none;
-
-  li {
-    font-size: 1rem;
-    color: #777777;
-    margin-bottom: 20px;
-    cursor: pointer;
-    transition: color 0.3s;
-
-    &:hover {
-      color: #333333;
-    }
-  }
 `;
 
 function Info() {
